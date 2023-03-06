@@ -35,7 +35,6 @@ public class AppConfig {
       dataSource.setPassword(env.getProperty("db.password"));
       return dataSource;
    }
-
    @Bean
    public LocalSessionFactoryBean getSessionFactory() {
       LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
@@ -49,7 +48,6 @@ public class AppConfig {
       factoryBean.setAnnotatedClasses(User.class, Car.class);
       return factoryBean;
    }
-
    @Bean
    public HibernateTransactionManager getTransactionManager() {
       HibernateTransactionManager transactionManager = new HibernateTransactionManager();

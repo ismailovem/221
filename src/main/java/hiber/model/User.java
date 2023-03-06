@@ -1,7 +1,5 @@
 package hiber.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.*;
 
 @Entity
@@ -39,23 +37,14 @@ public class User {
    public Long getId() {
       return id;
    }
-   public String getFirstName() {
-      return firstName;
-   }
 
-   public String getLastName() {
-      return lastName;
+   public String getName() {
+      return firstName + " " + lastName;
    }
-
    public String getEmail() {
       return email;
    }
-
-   public String getCarModel() {
-      return car.getModel();
+   public String getCarInfo() {
+      return car.getModel() + " " + car.getSeries();
    }
-   public Integer getCarSeries() {
-      return car.getSeries();
-   }
-
 }
