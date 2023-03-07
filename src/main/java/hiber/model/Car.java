@@ -12,13 +12,10 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(name = "model")
     private String model;
-
     @Column(name = "series")
     private int series;
-
     @OneToOne(mappedBy = "car")
     private User user;
     @Autowired
@@ -29,6 +26,5 @@ public class Car {
         this.series = series;
     }
     public String getModel() { return model; }
-
     public Integer getSeries() { return series;  }
 }

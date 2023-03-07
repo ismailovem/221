@@ -23,7 +23,12 @@ public class User {
    private Car car;
    @Autowired
    public User() {}
-   public User(String firstName, String lastName, String email,Car car) {
+   public User(String firstName, String lastName, String email) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.email = email;
+   }
+   public User(String firstName, String lastName, String email, Car car) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
@@ -38,6 +43,6 @@ public class User {
    }
    @Override
    public String toString() {
-      return  id + " | " + getName() + " | " + getEmail() + " | " + getCarInfo();
+      return  id + " | " + getName() + " | " + getEmail();
    }
 }
