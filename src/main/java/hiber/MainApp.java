@@ -23,12 +23,12 @@ public class MainApp {
 
         List<User> users = userService.listUsers();
         for (User user : users) {
-            System.out.println(user.toString());
+            System.out.println(user);
         }
 
         List<User> usersAndCars = userService.selectUserByCar("x6",222);
         for (User us : usersAndCars) {
-            System.out.println(us.toString());
+            System.out.println(us);
         }
 
         context.close();
